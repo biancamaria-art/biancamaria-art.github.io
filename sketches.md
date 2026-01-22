@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Bianca Maria Art
-permalink: /
+title: Sketches
+permalink: /sketches/
 ---
 
 <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<h1>Portfolio</h1>
-<p>Welcome to my portfolio. Click on any image to view it in full resolution.</p>
+<h1>Sketches</h1>
+<p>Rapid ideas and rough drawings.</p>
 
-{% include gallery.html folder="/assets/art/thumbs/" id="main-portfolio" %}
+{% include gallery.html folder="/assets/sketches/thumbs/" id="sketches-gallery" %}
 
 <script>
   const lightbox = GLightbox({ selector: '.glightbox' });
