@@ -1,16 +1,23 @@
 ---
 layout: page
-title: Bianca Maria Art
 permalink: /
+gallery_images:
+  - image: /assets/art/thumbs/IMG_0037.jpeg
+    title: "Self Portrait III"
+  - image: /assets/art/thumbs/IMG_0049.jpeg
+    title: "Study of a Shell"
+  - image: /assets/art/thumbs/IMG_2047.jpeg
+    title: "Will you help me find the words?"
+  - image: /assets/art/thumbs/IMG_7757.jpeg
+    title: "Emma"
+  - image: /assets/art/thumbs/isolacrylic.jpeg
+    title: "Isol IV"
 ---
-
 <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<h1>Portfolio</h1>
-<p>Welcome to my portfolio. Click on any image to view it in full resolution.</p>
 
-{% include gallery.html folder="/assets/art/thumbs/" id="main-portfolio" %}
+{% include gallery.html images=page.gallery_images id="main-portfolio" %}
 
 <script>
   const lightbox = GLightbox({ selector: '.glightbox' });

@@ -1,13 +1,8 @@
 <div class="gallery" style="display:flex; flex-wrap:wrap; gap:10px;">
-  {% assign image_folder = include.folder %}
-  {% assign gallery_id = include.id | default: "gallery" %}
-
-  {% for image in site.static_files %}
-    {% if image.path contains image_folder %}
-      {% assign full_path = image.path | replace: '/thumbs', '' %}
-      <a href="{{ full_path }}" class="glightbox" data-gallery="{{ gallery_id }}">
-        <img src="{{ image.path }}" width="220" height="auto" loading="lazy" style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);" />
-      </a>
-    {% endif %}
+  {% for item in include.images %}
+    {% assign full_path = item.image | replace: '/thumbs', '' %}
+    <a href="{{ full_path }}" class="glightbox" data-gallery="{{ include.id }}" data-title="{{ item.title }}">
+      <img src="{{ item.image }}" width="220" height="auto" loading="lazy" style="border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);" alt="{{ item.title }}" />
+    </a>
   {% endfor %}
 </div>
